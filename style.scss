@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$primary: #5e3bee;
+$secendery: #282938;
+// SCSS SYNTAX/
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1750px;
+  margin: 0 auto;
+}
+@mixin button($bg: #ffffff, $color) {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 32px;
+  color: $color;
+  padding: 18px 30px;
+  border: 1px solid $primary;
+  background: $bg;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+header {
+  nav {
+    background: #ffffff;
+    box-shadow: 0 5.33px 80px #0000001a;
+    ul {
+      gap: 42px;
+      li {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 31px;
+        color: #1c1e53 !important;
+        transition: 0.4s;
+        &:hover a {
+          color: #5e3bee !important;
+        }
+      }
+    }
+    .navBtn {
+      @include button(transparent, $primary);
+      &:hover {
+        color: #ffffff !important;
+        background: #5e3bee !important;
+      }
+    }
+  }
+}
+#banner {
+  background: #f5fcff;
+  padding: 119px 0;
+
+  .banner__title {
+    .banner__titleh2 {
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 32px;
+      color: #282938;
+    }
+    .banner__titleh3 {
+      font-size: 74px;
+      font-weight: 700;
+      line-height: 90px;
+      color: #282938;
+      max-width: 790px;
+      margin-top: 21px;
+    }
+    span {
+      color: #5e3bee;
+    }
+    .banner__titlep {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      color: $primary;
+      max-width: 621px;
+      margin-top: 21px;
+      margin-bottom: 32px;
+    }
+    .banner__btn {
+      @include button($primary, #ffffff);
+      &:hover {
+        background: #ffffff !important;
+        color: $primary;
+      }
+    }
+  }
+}
+#skill {
+  padding: 149px 0;
+  .skill__heading {
+    .skill__headingh2 {
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 32px;
+      color: #282938;
+      margin-bottom: 21px;
+    }
+    .skill__headingh3 {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 74px;
+      color: #282938;
+      margin-bottom: 106px;
+    }
+  }
+  .skill__box {
+    background: #f5fcff;
+    width: 100%;
+    padding: 32px 32px;
+    border-radius: 10px;
+    .skill__boxh2 {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 44px;
+      color: #282938;
+      margin-top: 32px;
+      margin-bottom: 21px;
+    }
+    .skill__boxp {
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 32px;
+      color: #282938;
+      max-width: 341px;
+    }
+    .img__box {
+      padding: 10px 10px;
+      background: #ffffff;
+      border-radius: 10px;
+    }
+  }
+}
